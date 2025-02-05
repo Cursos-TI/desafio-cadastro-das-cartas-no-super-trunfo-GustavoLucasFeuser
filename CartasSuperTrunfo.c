@@ -17,6 +17,8 @@ int main() {
     float area;
     float PIB;
     int numpontosturisticos;
+    float densidade; // Variável que calcula a densidade populacional
+    float PIBcapita; // Variável que calcula PIB per Capita
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -43,6 +45,9 @@ int main() {
     printf("Digite o número de pontos turisticos da cidade: \n");
     scanf("%d", &numpontosturisticos);
 
+    densidade = (float) populacao / area;
+    PIBcapita = (float) PIB / populacao;
+
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -55,8 +60,9 @@ int main() {
     printf("Área da cidade: %f \n", area);
     printf("PIB da cidade: %f \n", PIB);
     printf("Número de pontos turísticos da cidade: %d \n", numpontosturisticos);
+    printf("A densidade populacional da cidade %s é de %f \n", nomecidade, densidade);
+    printf("A PIB per Capita da cidade %s é de %f \n", nomecidade, PIBcapita);
+
     
-
-
     return 0;
 }
